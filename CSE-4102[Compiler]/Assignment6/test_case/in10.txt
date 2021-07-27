@@ -1,0 +1,7 @@
+X->YaZ
+Y->eYZ
+Z->ac
+Y->d
+Y->#
+
+aac

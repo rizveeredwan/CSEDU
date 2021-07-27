@@ -1,0 +1,5 @@
+#!/bin/bash
+
+lex practice.l
+gcc lex.yy.c -o out -ll
+./out

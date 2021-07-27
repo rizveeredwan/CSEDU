@@ -1,0 +1,184 @@
+Expression : ( number * number + number ) 
+goal => expr
+     => term expr2 
+     => factor term2 expr2 
+     => ( expr ) term2 expr2 
+     => ( term expr2 ) term2 expr2 
+     => ( factor term2 expr2 ) term2 expr2 
+     => ( number term2 expr2 ) term2 expr2 
+     => ( number * factor term2 expr2 ) term2 expr2 
+     => ( number * number term2 expr2 ) term2 expr2 
+     => ( number * number expr2 ) term2 expr2 
+     => ( number * number + term expr2 ) term2 expr2 
+     => ( number * number + factor term2 expr2 ) term2 expr2 
+     => ( number * number + number term2 expr2 ) term2 expr2 
+     => ( number * number + number expr2 ) term2 expr2 
+     => ( number * number + number ) term2 expr2 
+     => ( number * number + number ) expr2 
+     => ( number * number + number ) 
+
+Expression : number + number - number 
+goal => expr
+     => term expr2 
+     => factor term2 expr2 
+     => number term2 expr2 
+     => number expr2 
+     => number + term expr2 
+     => number + factor term2 expr2 
+     => number + number term2 expr2 
+     => number + number expr2 
+     => number + number - term expr2 
+     => number + number - factor term2 expr2 
+     => number + number - number term2 expr2 
+     => number + number - number expr2 
+     => number + number - number 
+
+Expression : ( number + number ) - id * ( number / number - id ) + number * number + ( id ) 
+goal => expr
+     => term expr2 
+     => factor term2 expr2 
+     => ( expr ) term2 expr2 
+     => ( term expr2 ) term2 expr2 
+     => ( factor term2 expr2 ) term2 expr2 
+     => ( number term2 expr2 ) term2 expr2 
+     => ( number expr2 ) term2 expr2 
+     => ( number + term expr2 ) term2 expr2 
+     => ( number + factor term2 expr2 ) term2 expr2 
+     => ( number + number term2 expr2 ) term2 expr2 
+     => ( number + number expr2 ) term2 expr2 
+     => ( number + number ) term2 expr2 
+     => ( number + number ) expr2 
+     => ( number + number ) - term expr2 
+     => ( number + number ) - factor term2 expr2 
+     => ( number + number ) - id term2 expr2 
+     => ( number + number ) - id * factor term2 expr2 
+     => ( number + number ) - id * ( expr ) term2 expr2 
+     => ( number + number ) - id * ( term expr2 ) term2 expr2 
+     => ( number + number ) - id * ( factor term2 expr2 ) term2 expr2 
+     => ( number + number ) - id * ( number term2 expr2 ) term2 expr2 
+     => ( number + number ) - id * ( number / factor term2 expr2 ) term2 expr2 
+     => ( number + number ) - id * ( number / number term2 expr2 ) term2 expr2 
+     => ( number + number ) - id * ( number / number expr2 ) term2 expr2 
+     => ( number + number ) - id * ( number / number - term expr2 ) term2 expr2 
+     => ( number + number ) - id * ( number / number - factor term2 expr2 ) term2 expr2 
+     => ( number + number ) - id * ( number / number - id term2 expr2 ) term2 expr2 
+     => ( number + number ) - id * ( number / number - id expr2 ) term2 expr2 
+     => ( number + number ) - id * ( number / number - id ) term2 expr2 
+     => ( number + number ) - id * ( number / number - id ) expr2 
+     => ( number + number ) - id * ( number / number - id ) + term expr2 
+     => ( number + number ) - id * ( number / number - id ) + factor term2 expr2 
+     => ( number + number ) - id * ( number / number - id ) + number term2 expr2 
+     => ( number + number ) - id * ( number / number - id ) + number * factor term2 expr2 
+     => ( number + number ) - id * ( number / number - id ) + number * number term2 expr2 
+     => ( number + number ) - id * ( number / number - id ) + number * number expr2 
+     => ( number + number ) - id * ( number / number - id ) + number * number + term expr2 
+     => ( number + number ) - id * ( number / number - id ) + number * number + factor term2 expr2 
+     => ( number + number ) - id * ( number / number - id ) + number * number + ( expr ) term2 expr2 
+     => ( number + number ) - id * ( number / number - id ) + number * number + ( term expr2 ) term2 expr2 
+     => ( number + number ) - id * ( number / number - id ) + number * number + ( factor term2 expr2 ) term2 expr2 
+     => ( number + number ) - id * ( number / number - id ) + number * number + ( id term2 expr2 ) term2 expr2 
+     => ( number + number ) - id * ( number / number - id ) + number * number + ( id expr2 ) term2 expr2 
+     => ( number + number ) - id * ( number / number - id ) + number * number + ( id ) term2 expr2 
+     => ( number + number ) - id * ( number / number - id ) + number * number + ( id ) expr2 
+     => ( number + number ) - id * ( number / number - id ) + number * number + ( id ) 
+
+Expression : number + number 
+goal => expr
+     => term expr2 
+     => factor term2 expr2 
+     => number term2 expr2 
+     => number expr2 
+     => number + term expr2 
+     => number + factor term2 expr2 
+     => number + number term2 expr2 
+     => number + number expr2 
+     => number + number 
+
+Expression : ( number / number ) + id - number 
+goal => expr
+     => term expr2 
+     => factor term2 expr2 
+     => ( expr ) term2 expr2 
+     => ( term expr2 ) term2 expr2 
+     => ( factor term2 expr2 ) term2 expr2 
+     => ( number term2 expr2 ) term2 expr2 
+     => ( number / factor term2 expr2 ) term2 expr2 
+     => ( number / number term2 expr2 ) term2 expr2 
+     => ( number / number expr2 ) term2 expr2 
+     => ( number / number ) term2 expr2 
+     => ( number / number ) expr2 
+     => ( number / number ) + term expr2 
+     => ( number / number ) + factor term2 expr2 
+     => ( number / number ) + id term2 expr2 
+     => ( number / number ) + id expr2 
+     => ( number / number ) + id - term expr2 
+     => ( number / number ) + id - factor term2 expr2 
+     => ( number / number ) + id - number term2 expr2 
+     => ( number / number ) + id - number expr2 
+     => ( number / number ) + id - number 
+
+Expression : number number ( ) 
+operating missing error 
+
+Expression : + id * number / id 
+operator + can't function properly due to insufficient number of operand 
+
+Expression : number + number * ( id + id ) 
+goal => expr
+     => term expr2 
+     => factor term2 expr2 
+     => number term2 expr2 
+     => number expr2 
+     => number + term expr2 
+     => number + factor term2 expr2 
+     => number + number term2 expr2 
+     => number + number * factor term2 expr2 
+     => number + number * ( expr ) term2 expr2 
+     => number + number * ( term expr2 ) term2 expr2 
+     => number + number * ( factor term2 expr2 ) term2 expr2 
+     => number + number * ( id term2 expr2 ) term2 expr2 
+     => number + number * ( id expr2 ) term2 expr2 
+     => number + number * ( id + term expr2 ) term2 expr2 
+     => number + number * ( id + factor term2 expr2 ) term2 expr2 
+     => number + number * ( id + id term2 expr2 ) term2 expr2 
+     => number + number * ( id + id expr2 ) term2 expr2 
+     => number + number * ( id + id ) term2 expr2 
+     => number + number * ( id + id ) expr2 
+     => number + number * ( id + id ) 
+
+Expression : number + number * ( id * id + number * ( id + number ) ) 
+goal => expr
+     => term expr2 
+     => factor term2 expr2 
+     => number term2 expr2 
+     => number expr2 
+     => number + term expr2 
+     => number + factor term2 expr2 
+     => number + number term2 expr2 
+     => number + number * factor term2 expr2 
+     => number + number * ( expr ) term2 expr2 
+     => number + number * ( term expr2 ) term2 expr2 
+     => number + number * ( factor term2 expr2 ) term2 expr2 
+     => number + number * ( id term2 expr2 ) term2 expr2 
+     => number + number * ( id * factor term2 expr2 ) term2 expr2 
+     => number + number * ( id * id term2 expr2 ) term2 expr2 
+     => number + number * ( id * id expr2 ) term2 expr2 
+     => number + number * ( id * id + term expr2 ) term2 expr2 
+     => number + number * ( id * id + factor term2 expr2 ) term2 expr2 
+     => number + number * ( id * id + number term2 expr2 ) term2 expr2 
+     => number + number * ( id * id + number * factor term2 expr2 ) term2 expr2 
+     => number + number * ( id * id + number * ( expr ) term2 expr2 ) term2 expr2 
+     => number + number * ( id * id + number * ( term expr2 ) term2 expr2 ) term2 expr2 
+     => number + number * ( id * id + number * ( factor term2 expr2 ) term2 expr2 ) term2 expr2 
+     => number + number * ( id * id + number * ( id term2 expr2 ) term2 expr2 ) term2 expr2 
+     => number + number * ( id * id + number * ( id expr2 ) term2 expr2 ) term2 expr2 
+     => number + number * ( id * id + number * ( id + term expr2 ) term2 expr2 ) term2 expr2 
+     => number + number * ( id * id + number * ( id + factor term2 expr2 ) term2 expr2 ) term2 expr2 
+     => number + number * ( id * id + number * ( id + number term2 expr2 ) term2 expr2 ) term2 expr2 
+     => number + number * ( id * id + number * ( id + number expr2 ) term2 expr2 ) term2 expr2 
+     => number + number * ( id * id + number * ( id + number ) term2 expr2 ) term2 expr2 
+     => number + number * ( id * id + number * ( id + number ) expr2 ) term2 expr2 
+     => number + number * ( id * id + number * ( id + number ) ) term2 expr2 
+     => number + number * ( id * id + number * ( id + number ) ) expr2 
+     => number + number * ( id * id + number * ( id + number ) ) 
+

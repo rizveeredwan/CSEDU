@@ -1,0 +1,554 @@
+First Generated 
+E: (i
+T: (i
+A: +#
+F: (i
+B: *#
+called 
+^ -> .E,$/
+E -> .TA,$/
+T -> .FB,+/$/
+F -> .(E),*/+/$/
+F -> .i,*/+/$/
+present state 1 5 0 0 0
+going 
+what 1
+^E.,$
+called 
+
+^ -> E.,$/
+present state 2 1 1 0 0
+going 
+what 2
+done 2 E
+ET.A,$
+called 
+
+E -> T.A,$/
+A -> .+TA,$/
+A -> #.,$/
+present state 3 3 0 0 1
+going 
+what 3
+ETA.,$
+called 
+
+E -> TA.,$/
+present state 4 1 1 0 0
+going 
+what 4
+done 4 A
+A+.TA,$
+called 
+A -> +.TA,$/
+T -> .FB,+/$/
+F -> .(E),*/+/$/
+F -> .i,*/+/$/
+present state 5 4 0 0 0
+going 
+what 5
+A+T.A,$
+called 
+
+A -> +T.A,$/
+A -> .+TA,$/
+A -> #.,$/
+present state 6 3 0 0 1
+going 
+what 6
+A+TA.,$
+called 
+
+A -> +TA.,$/
+present state 7 1 1 0 0
+going 
+what 7
+done 7 A
+A+.TA,$
+called 
+already calculated 5
+done 5 +
+done 6 T
+TF.B,+$
+called 
+
+T -> F.B,+/$/
+B -> .*FB,+/$/
+B -> #.,+/$/
+present state 8 3 0 0 1
+going 
+what 8
+TFB.,+$
+called 
+
+T -> FB.,+/$/
+present state 9 1 1 0 0
+going 
+what 9
+done 9 B
+B*.FB,+$
+called 
+B -> *.FB,+/$/
+F -> .(E),*/+/$/
+F -> .i,*/+/$/
+present state 10 3 0 0 0
+going 
+what 10
+B*F.B,+$
+called 
+
+B -> *F.B,+/$/
+B -> .*FB,+/$/
+B -> #.,+/$/
+present state 11 3 0 0 1
+going 
+what 11
+B*FB.,+$
+called 
+
+B -> *FB.,+/$/
+present state 12 1 1 0 0
+going 
+what 12
+done 12 B
+B*.FB,+$
+called 
+already calculated 10
+done 10 *
+done 11 F
+F(.E),*+$
+called 
+F -> (.E),*/+/$/
+E -> .TA,)/
+T -> .FB,+/)/
+F -> .(E),*/+/)/
+F -> .i,*/+/)/
+present state 13 5 0 0 0
+going 
+what 13
+F(E.),*+$
+called 
+F -> (E.),*/+/$/
+present state 14 1 0 0 0
+going 
+what 14
+F(E).,*+$
+called 
+
+F -> (E).,*/+/$/
+present state 15 1 1 0 0
+going 
+what 15
+done 15 )
+done 14 E
+ET.A,)
+called 
+
+E -> T.A,)/
+A -> .+TA,)/
+A -> #.,)/
+present state 16 3 0 0 1
+going 
+what 16
+ETA.,)
+called 
+
+E -> TA.,)/
+present state 17 1 1 0 0
+going 
+what 17
+done 17 A
+A+.TA,)
+called 
+A -> +.TA,)/
+T -> .FB,+/)/
+F -> .(E),*/+/)/
+F -> .i,*/+/)/
+present state 18 4 0 0 0
+going 
+what 18
+A+T.A,)
+called 
+
+A -> +T.A,)/
+A -> .+TA,)/
+A -> #.,)/
+present state 19 3 0 0 1
+going 
+what 19
+A+TA.,)
+called 
+
+A -> +TA.,)/
+present state 20 1 1 0 0
+going 
+what 20
+done 20 A
+A+.TA,)
+called 
+already calculated 18
+done 18 +
+done 19 T
+TF.B,+)
+called 
+
+T -> F.B,+/)/
+B -> .*FB,+/)/
+B -> #.,+/)/
+present state 21 3 0 0 1
+going 
+what 21
+TFB.,+)
+called 
+
+T -> FB.,+/)/
+present state 22 1 1 0 0
+going 
+what 22
+done 22 B
+B*.FB,+)
+called 
+B -> *.FB,+/)/
+F -> .(E),*/+/)/
+F -> .i,*/+/)/
+present state 23 3 0 0 0
+going 
+what 23
+B*F.B,+)
+called 
+
+B -> *F.B,+/)/
+B -> .*FB,+/)/
+B -> #.,+/)/
+present state 24 3 0 0 1
+going 
+what 24
+B*FB.,+)
+called 
+
+B -> *FB.,+/)/
+present state 25 1 1 0 0
+going 
+what 25
+done 25 B
+B*.FB,+)
+called 
+already calculated 23
+done 23 *
+done 24 F
+F(.E),*+)
+called 
+F -> (.E),*/+/)/
+E -> .TA,)/
+T -> .FB,+/)/
+F -> .(E),*/+/)/
+F -> .i,*/+/)/
+present state 26 5 0 0 0
+going 
+what 26
+F(E.),*+)
+called 
+F -> (E.),*/+/)/
+present state 27 1 0 0 0
+going 
+what 27
+F(E).,*+)
+called 
+
+F -> (E).,*/+/)/
+present state 28 1 1 0 0
+going 
+what 28
+done 28 )
+done 27 E
+ET.A,)
+called 
+already calculated 16
+done 16 T
+TF.B,+)
+called 
+already calculated 21
+done 21 F
+F(.E),*+)
+called 
+already calculated 26
+done 26 (
+Fi.,*+)
+called 
+
+F -> i.,*/+/)/
+present state 29 1 1 0 0
+going 
+what 29
+done 29 i
+done 26 (
+Fi.,*+)
+called 
+already calculated 29
+done 29 i
+done 23 *
+done 21 F
+F(.E),*+)
+called 
+already calculated 26
+done 26 (
+Fi.,*+)
+called 
+already calculated 29
+done 29 i
+done 18 +
+done 16 T
+TF.B,+)
+called 
+already calculated 21
+done 21 F
+F(.E),*+)
+called 
+already calculated 26
+done 26 (
+Fi.,*+)
+called 
+already calculated 29
+done 29 i
+done 13 (
+Fi.,*+$
+called 
+
+F -> i.,*/+/$/
+present state 30 1 1 0 0
+going 
+what 30
+done 30 i
+done 10 *
+done 8 F
+F(.E),*+$
+called 
+already calculated 13
+done 13 (
+Fi.,*+$
+called 
+already calculated 30
+done 30 i
+done 5 +
+done 3 T
+TF.B,+$
+called 
+already calculated 8
+done 8 F
+F(.E),*+$
+called 
+already calculated 13
+done 13 (
+Fi.,*+$
+called 
+already calculated 30
+done 30 i
+canonical set
+state 1
+^ -> .E,$/
+E -> .TA,$/
+T -> .FB,+/$/
+F -> .(E),*/+/$/
+F -> .i,*/+/$/
+state 2
+^ -> E.,$/
+state 3
+E -> T.A,$/
+A -> .+TA,$/
+A -> #.,$/
+state 4
+E -> TA.,$/
+state 5
+A -> +.TA,$/
+T -> .FB,+/$/
+F -> .(E),*/+/$/
+F -> .i,*/+/$/
+state 6
+A -> +T.A,$/
+A -> .+TA,$/
+A -> #.,$/
+state 7
+A -> +TA.,$/
+state 8
+T -> F.B,+/$/
+B -> .*FB,+/$/
+B -> #.,+/$/
+state 9
+T -> FB.,+/$/
+state 10
+B -> *.FB,+/$/
+F -> .(E),*/+/$/
+F -> .i,*/+/$/
+state 11
+B -> *F.B,+/$/
+B -> .*FB,+/$/
+B -> #.,+/$/
+state 12
+B -> *FB.,+/$/
+state 13
+F -> (.E),*/+/$/
+E -> .TA,)/
+T -> .FB,+/)/
+F -> .(E),*/+/)/
+F -> .i,*/+/)/
+state 14
+F -> (E.),*/+/$/
+state 15
+F -> (E).,*/+/$/
+state 16
+E -> T.A,)/
+A -> .+TA,)/
+A -> #.,)/
+state 17
+E -> TA.,)/
+state 18
+A -> +.TA,)/
+T -> .FB,+/)/
+F -> .(E),*/+/)/
+F -> .i,*/+/)/
+state 19
+A -> +T.A,)/
+A -> .+TA,)/
+A -> #.,)/
+state 20
+A -> +TA.,)/
+state 21
+T -> F.B,+/)/
+B -> .*FB,+/)/
+B -> #.,+/)/
+state 22
+T -> FB.,+/)/
+state 23
+B -> *.FB,+/)/
+F -> .(E),*/+/)/
+F -> .i,*/+/)/
+state 24
+B -> *F.B,+/)/
+B -> .*FB,+/)/
+B -> #.,+/)/
+state 25
+B -> *FB.,+/)/
+state 26
+F -> (.E),*/+/)/
+E -> .TA,)/
+T -> .FB,+/)/
+F -> .(E),*/+/)/
+F -> .i,*/+/)/
+state 27
+F -> (E.),*/+/)/
+state 28
+F -> (E).,*/+/)/
+state 29
+F -> i.,*/+/)/
+state 30
+F -> i.,*/+/$/
+same are 
+E -> T.A,$/
+A -> .+TA,$/
+A -> #.,$/
+*******i 3 j 16 3
+E -> T.A,)/
+A -> .+TA,)/
+A -> #.,)/
+same are 
+E -> TA.,$/
+*******i 4 j 17 4
+E -> TA.,)/
+same are 
+A -> +.TA,$/
+T -> .FB,+/$/
+F -> .(E),*/+/$/
+F -> .i,*/+/$/
+*******i 5 j 18 5
+A -> +.TA,)/
+T -> .FB,+/)/
+F -> .(E),*/+/)/
+F -> .i,*/+/)/
+same are 
+A -> +T.A,$/
+A -> .+TA,$/
+A -> #.,$/
+*******i 6 j 19 6
+A -> +T.A,)/
+A -> .+TA,)/
+A -> #.,)/
+same are 
+A -> +TA.,$/
+*******i 7 j 20 7
+A -> +TA.,)/
+same are 
+T -> F.B,+/$/
+B -> .*FB,+/$/
+B -> #.,+/$/
+*******i 8 j 21 8
+T -> F.B,+/)/
+B -> .*FB,+/)/
+B -> #.,+/)/
+same are 
+T -> FB.,+/$/
+*******i 9 j 22 9
+T -> FB.,+/)/
+same are 
+B -> *.FB,+/$/
+F -> .(E),*/+/$/
+F -> .i,*/+/$/
+*******i 10 j 23 10
+B -> *.FB,+/)/
+F -> .(E),*/+/)/
+F -> .i,*/+/)/
+same are 
+B -> *F.B,+/$/
+B -> .*FB,+/$/
+B -> #.,+/$/
+*******i 11 j 24 11
+B -> *F.B,+/)/
+B -> .*FB,+/)/
+B -> #.,+/)/
+same are 
+B -> *FB.,+/$/
+*******i 12 j 25 12
+B -> *FB.,+/)/
+same are 
+F -> (.E),*/+/$/
+E -> .TA,)/
+T -> .FB,+/)/
+F -> .(E),*/+/)/
+F -> .i,*/+/)/
+*******i 13 j 26 13
+F -> (.E),*/+/)/
+E -> .TA,)/
+T -> .FB,+/)/
+F -> .(E),*/+/)/
+F -> .i,*/+/)/
+same are 
+F -> (E.),*/+/$/
+*******i 14 j 27 14
+F -> (E.),*/+/)/
+same are 
+F -> (E).,*/+/$/
+*******i 15 j 28 15
+F -> (E).,*/+/)/
+same are 
+F -> i.,*/+/)/
+*******i 29 j 30 16
+F -> i.,*/+/$/
+16
+(i*i)+i$
+F->i
+F->i
+B->#
+B->*FB
+T->FB
+A->#
+E->TA
+F->(E)
+B->#
+T->FB
+F->i
+B->#
+T->FB
+A->#
+A->+TA
+E->TA
+^->E
+Accepted

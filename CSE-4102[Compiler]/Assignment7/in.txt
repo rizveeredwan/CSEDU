@@ -1,0 +1,9 @@
+S->AB
+S->e
+A->Cf
+A->B
+B->mn
+B->#
+C->pq
+
+eacaac

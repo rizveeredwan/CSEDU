@@ -1,0 +1,7 @@
+1)First write productions in a file
+2)give a gap line
+3)and then give input string.
+4)and please change it in input function in code.Then Run the script. Output will be 
+  found in the terminal.In input function you will found freopen. Just change the 
+  parameter of it.And after that running the script will produce the output and show it
+  in terminal. 

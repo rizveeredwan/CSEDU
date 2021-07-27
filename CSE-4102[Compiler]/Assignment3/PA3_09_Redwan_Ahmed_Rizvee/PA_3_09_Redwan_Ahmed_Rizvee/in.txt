@@ -1,0 +1,14 @@
+9 ( 9 + 1 )
+( number * number + number )  
+number + number - number 
+( number + number ) - id * ( number / number - id ) + number * number + ( id ) 
+number + number 
+( number / number ) + id - number 
+number number ( )
++ id * number / id 
+( a + 3 )
+b + 4
+1 + 2 / 3 + ( 7 )
+9 + 7 * ( a + b ) 
+9 + 7 * ( a * a + b * ( c + 8 ) )  
+@ ; + ( b + 6 )

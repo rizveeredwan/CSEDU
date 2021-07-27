@@ -1,0 +1,10 @@
+S->AbB
+S->de
+A->Cb
+A->B
+B->gd
+B->#
+B->C
+C->ae
+
+gdbae

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+g++ -o out Assignment_3_Roll_09.cpp  
+./out

@@ -1,0 +1,6 @@
+# Open a terminal and type the following commands:
+
+lex lexFilename.l
+yacc -d yaccFilename.y
+gcc lex.yy.c y.tab.c -o executionFilename -ly -ll
+./executionFilename

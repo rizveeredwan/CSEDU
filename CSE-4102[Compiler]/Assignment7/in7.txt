@@ -1,0 +1,6 @@
+S->aTRe
+T->Tbc
+T->b
+R->d
+
+abde

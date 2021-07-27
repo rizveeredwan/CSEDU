@@ -1,0 +1,7 @@
+S->iEtST
+S->o
+T->eS
+T->#
+E->b
+
+ibtibtoeo

@@ -1,0 +1,9 @@
+( number * number + number )  
+number + number - number 
+( number + number ) - id * ( number / number - id ) + number * number + ( id ) 
+number + number 
+( number / number ) + id - number 
+number number ( )
++ id * number / id 
+number + number * ( id  + id ) 
+number + number * ( id * id + number * ( id + number ) ) 

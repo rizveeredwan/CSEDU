@@ -1,0 +1,5 @@
+#!/bin/bash
+
+lex Assignment_2_Roll_09.l
+gcc lex.yy.c -o out -ll
+./out
