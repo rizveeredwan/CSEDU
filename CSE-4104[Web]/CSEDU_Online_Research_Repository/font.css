@@ -1,0 +1,6 @@
+/*CSS File to think about fonts */
+
+@font-face {
+    font-family: roboto-regular;
+    src: url('../Roboto/Roboto-Regular.ttf');
+}

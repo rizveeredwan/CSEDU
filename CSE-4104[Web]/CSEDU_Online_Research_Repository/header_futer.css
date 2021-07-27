@@ -1,0 +1,73 @@
+/*decoration of top header*/
+
+.top-header {
+    background: #0f0f57;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+
+/*This part is for logo of DU Name and CSEDU*/
+
+.name-logo {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
+
+/*logo-1*/
+
+.logo-1 {
+    margin-left: 40%;
+}
+
+
+/*log in button decoration*/
+
+.log-button {
+    padding: 10px 10px 10px 10px;
+    margin-left: 30%;
+}
+
+
+/*designing menu option*/
+
+.menu-option-design {
+    display: grid;
+    grid-template-columns: 10% 16% 16% 16% 16% 16% 10%;
+    color: white;
+    background: #0f0f57;
+}
+
+
+/*Menu per option decoration*/
+
+.menu-per-option-decoration {
+    padding: 30% 40% 30% 40%;
+    /*Top Rown Bottom left */
+}
+
+.menu-per-option-decoration:hover {
+    background: #ffbf00;
+}
+
+
+/*The bar under menu decoration*/
+
+.bar-under-menu-main-part {
+    background: #ffbf00;
+    width: 100%;
+    padding: 2px 0px 2px 0px;
+}
+
+
+/*The Footer Section */
+
+.footer {
+    background: #0f0f57;
+    display: grid;
+    grid-template-columns: 5% 30% 30% 30% 5%;
+    color: white;
+    margin-top: 10%;
+}

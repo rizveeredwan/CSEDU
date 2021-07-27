@@ -1,0 +1,36 @@
+/*This file is used to decorate tables*/
+
+.table-design {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    background: #e6e6e6;
+    color: black;
+    margin-top: 5%;
+    border: 1px solid #0f0f57;
+    box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
+}
+
+
+/*table header decoration */
+
+.table-section-heading-decoration {
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+}
+
+
+/*table decoration*/
+
+.main-table {
+    margin-left: 2%;
+    margin-right: 2%;
+    background: white;
+}
+
+
+/*This basically creates space */
+
+.space-creator-from-top {
+    padding: 10px 0px 10px 0px;
+}

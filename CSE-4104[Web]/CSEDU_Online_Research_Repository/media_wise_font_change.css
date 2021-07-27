@@ -1,0 +1,135 @@
+/* Purpose of this CSS file is to change font size according to the media */
+
+
+/*body fonts */
+
+@media all and (min-width: 960px) {
+    body {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+    h6 {
+        font-size: 14px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .btn {
+        font-size: 16px;
+    }
+    input[type="text"] {
+        font-size: 16px;
+    }
+    input[type="password"] {
+        font-size: 16px;
+    }
+    input[type="email"] {
+        font-size: 16px;
+    }
+    select option {
+        font-size: 16px;
+    }
+}
+
+@media all and (max-width: 959px) and (min-width: 600px) {
+    body {
+        font-size: 10px;
+    }
+    h1 {
+        font-size: 12px;
+    }
+    h2 {
+        font-size: 12px;
+    }
+    h3 {
+        font-size: 12px;
+    }
+    h4 {
+        font-size: 12px;
+    }
+    h6 {
+        font-size: 8px;
+    }
+    p {
+        font-size: 10px;
+    }
+    .btn {
+        font-size: 10px;
+    }
+    input[type="text"] {
+        font-size: 10px;
+    }
+    input[type="password"] {
+        font-size: 10px;
+    }
+    input[type="email"] {
+        font-size: 10px;
+    }
+    select option {
+        font-size: 10px;
+    }
+}
+
+@media all and (max-width: 599px) and (min-width: 200px) {
+    body {
+        font-size: 6px;
+    }
+    h1 {
+        font-size: 8px;
+    }
+    h2 {
+        font-size: 8px;
+    }
+    h3 {
+        font-size: 8px;
+    }
+    h4 {
+        font-size: 8px;
+    }
+    h6 {
+        font-size: 4px;
+    }
+    p {
+        font-size: 6px;
+    }
+    .btn {
+        font-size: 6px;
+    }
+    input[type="text"] {
+        font-size: 6px;
+    }
+    input[type="password"] {
+        font-size: 6px;
+    }
+    input[type="email"] {
+        font-size: 6px;
+    }
+    select option {
+        font-size: 6px;
+    }
+}
+
+
+/*To change cursor*/
+
+.menu-per-option-decoration {
+    cursor: pointer;
+}
+
+
+/*this style class will change cursor*/
+
+.change_cursor {
+    cursor: pointer;
+}

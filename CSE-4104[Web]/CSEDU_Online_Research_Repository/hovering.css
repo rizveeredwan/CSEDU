@@ -1,0 +1,16 @@
+/*Purpose of this CSS file is to hover
+    and decoration of the last section of home.html 
+    description part 
+*/
+
+.hovering {
+    margin-left: 10%;
+    margin-right: 10%;
+    background: black;
+    color: white;
+    /*background: #ffbf00;*/
+}
+
+.hovering:hover {
+    background: #ffbf00;
+}

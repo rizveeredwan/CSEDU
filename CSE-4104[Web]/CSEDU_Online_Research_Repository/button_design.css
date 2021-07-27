@@ -1,0 +1,30 @@
+/*This file is used to decorate buttons*/
+
+.button-center {
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+    padding: 5px 0px 5px 0px;
+}
+
+
+/*The Update Buttons in table*/
+
+.table-update-button {
+    background: #e6e6e6;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+/*Radio button design*/
+
+.radio-button-design {
+    display: grid;
+    grid-template-columns: 5% 30% 30% 30% 5%;
+}
+
+.radio-button-design-input {
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 100%;
+}
