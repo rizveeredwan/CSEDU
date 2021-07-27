@@ -1,0 +1,4 @@
+#!/bin/bash
+
+g++ Ellipse_mid_point.cpp -o gl -lGL -lGLU -lglut
+./gl

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+g++ Rotation.cpp -o gl -lGL -lGLU -lglut
+./gl

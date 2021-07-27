@@ -1,0 +1,4 @@
+#!/bin/bash
+
+g++ Code.cpp -o gl -lGL -lGLU -lglut
+./gl

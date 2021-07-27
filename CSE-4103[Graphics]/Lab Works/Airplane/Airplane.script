@@ -1,0 +1,4 @@
+#!/bin/bash
+
+g++ Airplane.cpp -o gl -lGL -lGLU -lglut
+./gl

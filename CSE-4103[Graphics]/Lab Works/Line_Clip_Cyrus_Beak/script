@@ -1,0 +1,4 @@
+#!/bin/bash
+
+g++ Cyrus_beck_Final.cpp -o gl -lGL -lGLU -lglut
+./gl

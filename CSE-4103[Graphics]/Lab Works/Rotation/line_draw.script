@@ -1,0 +1,4 @@
+#!/bin/bash
+
+g++ Line_draw.cpp -o gl -lGL -lGLU -lglut
+./gl

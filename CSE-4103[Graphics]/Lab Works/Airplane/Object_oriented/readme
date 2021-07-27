@@ -1,0 +1,10 @@
+Prepare a File what you will run.
+
+First value will contain number of points.(n)
+Seond value will contain number of surface.(k)
+
+Then there will be n points.
+
+The each k lines will have one value which will say number of points in that surface(p).
+Then after that there will be p values which will say the about the join.
+Please follow the format of the given .ply files.

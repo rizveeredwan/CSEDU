@@ -1,0 +1,5 @@
+#!/bin/bash
+
+g++ polygon_fill_shading.cpp -o gl -lGL -lGLU -lglut
+./gl
+
