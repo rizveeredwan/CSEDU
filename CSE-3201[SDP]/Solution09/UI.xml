@@ -1,0 +1,23 @@
+<body>
+<Button 
+value="click on me"
+X="250"
+Y="300"/>
+<Button 
+value="Box to edit"
+X="310"
+Y="400"/>
+<EditBox
+value="Box hu"
+X="300"
+Y="300"/>
+<Button 
+value="Box to edit"
+X="700"
+Y="300"/>
+<TextBox 
+value="New Text Box"
+X="53"
+Y="64"/>
+</body>
+
