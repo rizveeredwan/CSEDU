@@ -1,0 +1,211 @@
+cd Downloads
+cd $HOME
+
+mkdir -p os161/ sys161/tools
+
+cd os161/
+
+
+#Download Required Files
+
+wget http://www.student.cs.uwaterloo.ca/~cs350/os161_repository/os161-binutils.tar.gz
+
+wget http://www.student.cs.uwaterloo.ca/~cs350/os161_repository/os161-gcc.tar.gz
+
+wget http://www.student.cs.uwaterloo.ca/~cs350/os161_repository/os161-gdb.tar.gz
+
+wget http://www.student.cs.uwaterloo.ca/~cs350/os161_repository/os161-bmake.tar.gz
+
+wget http://www.student.cs.uwaterloo.ca/~cs350/os161_repository/os161-mk.tar.gz
+
+wget http://www.student.cs.uwaterloo.ca/~cs350/os161_repository/sys161.tar.gz
+
+wget http://www.student.cs.uwaterloo.ca/~cs350/os161_repository/os161.tar.gz
+
+#End of Download
+
+ls
+
+cd $HOME/os161
+
+tar -xzf os161-binutils.tar.gz
+
+cd binutils-2.17+os161-2.0.1/
+
+./configure --nfp --disable-werror --target=mips-harvard-os161 --prefix=$HOME/sys161/tools 
+
+make
+
+make install
+
+cd $HOME
+
+cd sys161/
+
+ls
+
+cd tools/
+
+ls
+
+mkdir $HOME/sys161/bin 
+
+export PATH=$HOME/sys161/bin:$HOME/sys161/tools/bin:$PATH
+
+echo "export PATH=$HOME/sys161/bin:$HOME/sys161/tools/bin:$PATH" >> $HOME/.bashrc 
+
+cd ..
+
+ls
+
+cd ..
+
+ls
+
+cd Downloads/
+
+ls
+
+cd $HOME
+
+cd os161/
+
+ls
+
+tar -xzf os161-gcc.tar.gz 
+
+cd gcc
+
+cd gcc-4.1.2+os161-2.0/
+
+./configure -nfp --disable-shared --disable-threads --disable-libmudflap --disable-libssp --target=mips-harvard-os161 --prefix=$HOME/sys161/tools
+
+make
+
+make install
+
+cd $HOME/os161
+
+tar -xf os161-gdb.tar.gz 
+
+cd gdb-6.6+os161-2.0/
+
+make
+
+make install
+
+cd $HOME/os161
+
+tar -xf os161-bmake.tar.gz 
+
+cd bmake/
+
+tar -xf ../os161-mk.tar.gz 
+
+./boot-strap --prefix=$HOME/sys161/tools 
+
+mkdir -p $HOME/sys161/tools/bin
+
+cp $HOME/os161/bmake/Linux/bmake $HOME/sys161/tools/bin/bmake-20101215
+
+rm -f $HOME/sys161/tools/bin/bmake
+
+ln -s bmake-20101215 $HOME/sys161/tools/bin/bmake
+
+mkdir -p $HOME/sys161/tools/share/man/cat1
+
+cp $HOME/os161/bmake/bmake.cat1 $HOME/sys161/tools/share/man/cat1/bmake.1
+
+sh $HOME/os161/bmake/mk/install-mk $HOME/sys161/tools/share/mk
+
+#cat > install.sh
+
+#mv install.sh script.sh
+
+#chmod 777 script.sh 
+
+#./script.sh 
+
+mkdir $HOME/sys161/bin
+
+cd $HOME/sys161/tools/bin
+
+sh -c 'for i in mips-*; do ln -s $HOME/sys161/tools/bin/$i $HOME/sys161/bin/cs350-`echo $i | cut -d- -f4-`; done'
+
+ln -s $HOME/sys161/tools/bin/bmake $HOME/sys161/bin/bmake
+
+cd $HOME/sys161/bin/
+
+cd ..
+
+ls
+
+cd ..
+
+cd $HOME/os161
+
+ls
+
+tar -xf sys161.tar.gz 
+
+cd sys161-1.99.06/
+
+./configure --prefix=$HOME/sys161 mipseb 
+
+make 
+
+make install
+
+cd $HOME/sys161
+
+ln -s share/examples/sys161/sys161.conf.sample sys161.conf 
+
+cd
+
+mkdir cs350-os161
+
+cp os161.tar.gz cs350-os161
+
+cd os161/
+
+ls
+
+cd ~/cs350-os161/
+
+tar -xf os161.tar.gz
+
+pwd
+
+echo "Before installing OS"
+
+cd
+
+cd cs350-os161/os161-1.99/
+
+./configure --ostree=$HOME/cs350-os161/root --toolprefix=cs350-
+
+cd kern/conf
+
+./config ASST0
+
+cd ../compile/ASST0
+
+bmake depend
+
+bmake
+
+bmake install
+
+cd $HOME/cs350-os161/os161-1.99
+
+bmake
+
+bmake install
+
+cd $HOME/cs350-os161/root
+
+cp $HOME/sys161/sys161.conf .
+
+clear
+
+cd $HOME/cs350-os161/root

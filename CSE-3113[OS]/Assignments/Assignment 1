@@ -1,0 +1,251 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<unistd.h>
+#include<sys/wait.h>
+
+
+//Function Prototypes Declarations
+void rizveeStartWork(void);
+char* rizveeReadLine(void);
+char **rizveeSplitLine(char * commandLine);
+int rizveeCd(char ** commandLineSplit);
+int rizveeEcho(char ** commandLineSplit);
+int rizveeExit(char ** commandLineSplit);
+int rizveeHelp(char ** commandLineSplit);
+int rizveeCreatingFork(char **commandLineSplit);
+
+//Global Variables
+
+#define MAX_INPUT_STRING_LENGTH 1000
+#define DELIM " "
+
+char *function_names[] = {
+  "cd" ,
+   "exit",
+   "help",
+   "echo"
+};
+
+int (*functionPointers[])(char **) = {
+ &rizveeCd,
+ &rizveeExit,
+ &rizveeHelp,
+ &rizveeEcho
+
+};
+
+
+
+
+int main(int argC, char **argV)   // argument constants and argument variables giving in
+{
+    rizveeStartWork();
+    return EXIT_SUCCESS; //Ending of My Shell Code
+}
+
+
+//declaration of Functions
+
+void rizveeStartWork(void)
+{
+    char *commandLine; //given input command
+    char **commandLineSplit; // spiliting the command
+    int workStatus;
+
+    do
+    {
+        printf("^_^ "); //my Emoticon
+        commandLine=rizveeReadLine(); //Rizvee Reading Line
+        commandLineSplit=rizveeSplitLine(commandLine);
+        workStatus=rizveeExecution(commandLineSplit);
+        free(commandLine);
+        free(commandLineSplit);
+    }
+    while(workStatus);
+}
+
+//Reading Line
+
+char * rizveeReadLine(void)
+{
+    int commandLineSize = MAX_INPUT_STRING_LENGTH;
+    int index = 0;
+    char *commandLine = malloc(sizeof(char)*commandLineSize); // space allocation
+    int character;
+    if (!commandLine)
+    {
+        fprintf(stderr,"Rizvee : error in taking command, space allocation problem");
+        exit(EXIT_FAILURE);
+    }
+    while(1)
+    {
+        //Reading Input Character in Integer ;
+        character = getchar();
+        //EOF or NULL
+        if(character == '\n' || character == EOF)
+        {
+            commandLine[index] = '\0';
+            return commandLine;
+        }
+        //Precaution about string length;
+        if(index>=commandLineSize)
+        {
+            commandLineSize += MAX_INPUT_STRING_LENGTH;
+            commandLine=realloc(commandLine,commandLineSize); //Reallocating Space;
+            if(!commandLine)
+            {
+                fprintf(stderr,"Rizvee : error in taking command, space allocation problem");
+                exit(EXIT_FAILURE);
+            }
+        }
+        // Making the character array
+        commandLine[index] = character;
+        index++;
+    }
+
+}
+
+//Spliting the line
+char ** rizveeSplitLine(char *commandLine)
+{
+    int commandLineSizeSplit = MAX_INPUT_STRING_LENGTH;
+    int index = 0;
+    char **commandLineSplit = malloc(sizeof(char*)*commandLineSizeSplit);
+    if(!commandLineSplit)
+    {
+           fprintf(stderr,"Rizvee : Error in Splitting the commands");
+           exit(EXIT_FAILURE);
+    }
+    char *temp;
+
+    temp = strtok(commandLine,DELIM);
+    while(temp != NULL)
+    {
+       commandLineSplit[index] = temp;
+
+       if(index>=commandLineSizeSplit)
+       {
+         commandLineSizeSplit += MAX_INPUT_STRING_LENGTH;
+         commandLineSplit = realloc(commandLineSplit,commandLineSizeSplit);
+         if(!commandLineSplit)
+         {
+           fprintf(stderr,"Rizvee : Error in Splitting the commands");
+           exit(EXIT_FAILURE);
+         }
+       }
+       index++;
+       temp = strtok(NULL,DELIM);
+    }
+    return commandLineSplit;
+
+}
+
+//Change Directory Command
+
+int rizveeCd(char **commandLineSplit) {
+  int v;
+  if(commandLineSplit[1] == NULL) {
+    v=chdir("~");
+  }
+  else {
+    v=chdir(commandLineSplit[1]);
+  }
+  if(v != 0) {
+   fprintf(stderr,"Expected argument missing");
+  }
+  return 1;
+}
+
+//ECHO Command
+
+int rizveeEcho(char **commandLineSplit)
+{
+
+    int i;
+    for(i=1; ;i++)
+    {
+      if(commandLineSplit[i]==NULL) break;
+      else printf("%s ",commandLineSplit[i]);
+      //fprintf(stdout," ");
+    }
+    printf("\n");
+    return 1;
+}
+
+//EXIT Command
+int rizveeExit(char **commandLineSplit)
+{
+  return 0;
+}
+
+//Counting the number of used functions
+
+int countUsedFunctionsNumber()
+{
+  int i;
+  for(i=0; ;i++)
+  {
+    if(function_names[i]== NULL) return i;
+  }
+}
+
+//Help Command
+int rizveeHelp(char **commandLineSplit)
+{
+   printf("The used commands in this shell:\n");
+   for(int i=0; ;i++)
+   {
+     if(function_names[i]==NULL) break;
+     else printf("%s\n",function_names[i]);
+   }
+   return 1;
+}
+
+//Rizvee Creatig Fork
+
+int rizveeCreatingFork(char **commandLineSplit)
+{
+   pid_t pid,wPid;
+   int presentStatus;
+   pid=fork();
+   if(pid==0)
+   {
+     int v=execvp(commandLineSplit[0],commandLineSplit);
+     if(v==-1)
+     {
+       perror("Error in running into new environment");
+     }
+   }
+   else if(pid<0)
+   {
+     perror("Error while forking");
+   }
+   else
+   {
+    do
+    {
+    wPid= waitpid(pid,&presentStatus,WUNTRACED);
+    }while(!WIFEXITED(presentStatus) && !WIFSIGNALED(presentStatus));
+   }
+   return 1;
+}
+
+//Execution of shell
+
+int rizveeExecution(char **commandLineSplit)
+{
+   if(commandLineSplit[0] == NULL) return 1;
+   for(int i=0;;i++)
+   {
+     if(function_names[i]==NULL) break;
+     if(strcmp(function_names[i],commandLineSplit[0])==0)
+     {
+       return (*functionPointers[i])(commandLineSplit);
+     }
+   }
+   return rizveeCreatingFork(commandLineSplit);
+}
+
+
+
