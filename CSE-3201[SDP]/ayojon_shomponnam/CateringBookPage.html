@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>AyojonSomponnam | Home </title>
+    <link href="HomePageTesting.css" type="text/css" rel="stylesheet">
+    <link href="Catering.css" type="text/css" rel="stylesheet">
+    <link href="CateringBookPage.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1 id="header">AyojonSomponnam</h1>
+            <ul>
+                <li class="headerOption"><a href="#" class="notCurrent">Log in</a></li>
+                <li class="headerOption"><a href="#" class="notCurrent">Sign up</a></li>
+                <li class="headerOption"><a href="#" class="notCurrent">About Us</a></li>
+                <li class="headerOption"><a href="#" class="notCurrent">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="breakLine">
+    </div>
+
+
+    <div id="menuDivisionUp">
+        <p1><a href="https://www.youtube.com/watch?v=Qerz5CQa2A8" class="meneOption">Home</a></p1>
+        <p1><a href="#" class="meneOption">Hall</a></p1>
+        <p1><a href="#" class="meneOption">Catering</a></p1>
+        <p1><a href="#" class="meneOption">Decorator</a></p1>
+        <p1><a href="#" class="meneOption">Photographer</a></p1>
+        <p1><a href="#" class="meneOption">Marriage Officiant</a></p1>
+    </div>
+
+    <div id="menuDivision">
+        <nav id="menuNev">
+            <ul>
+                <li><a href="#" class="meneOption">Home</a></li>
+                <li><a href="#" class="meneOption">Hall</a></li>
+                <li><a href="#" class="meneOption">Catering</a></li>
+                <li><a href="#" class="meneOption">Decorator</a></li>
+                <li><a href="#" class="meneOption">Photographer</a></li>
+                <li id="officiant"><a href="#">Marriage Officiant<a/></li>    
+            </ul>
+        </nav>
+    </div>
+
+    <div id="catering">
+        <div id="mainHeader">
+            <h1 id="cateringHeader">Caterers</h1>
+        </div>
+
+        <div class="pageItems">
+             <div class="info">
+                 <div class="image">
+                      <img src="catering2.jpeg" width="100%" height="100%">
+                 </div>
+                 <div class="lekha">
+                     <h2>Informations</h2>
+                      Name:<p1>Khana Khajana</p1><br/>
+                      Address:<p1>47/5 Mia Fazilchisti,Sylhet</p1><br/>
+                      Contact No:<p1>01796660214</p1><br/>
+                      Email:<p1>otpid.is@gmail.com</p1><br/>
+                    portfolio link:<p1><a href="http://www.facebook.com">khana khajana fan page</a></p1>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div id="foodItem">
+        <h1>Food Items</h1>
+        <div id="tableDiv">
+            <table id="foodItemTable" align="center">
+                <tr>
+                    <th>Number</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Shahi Polao</td>
+                    <td>100 Per person</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jhal Murgi</td>
+                    <td>100 Per person</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <br/>
+    <br/>
+    <div id="bookPart">
+        <div>
+            <h1>Book</h1>
+            <form id="formPart">
+                Date: <input type="date" name="" placeholder="dd-mm-y" id="date"><br/> Time:
+                <input type="text" name="" placeholder="morning/evening" id="time"><br/> Availability:
+                <p1>Press Availability to check Availability</p1><br/>
+            </form>
+            <form id="buttonPart">
+                <input type="submit" value="Check Availability" id="available">
+                <input type="submit" value="Book" id="book">
+                <input type="submit" value="In queue" id="queue">
+            </form>
+        </div>
+        <div id="tablePart">
+            <h1>Item Numbers to Book</h1>
+            <table align="center" id="orderPlaceTable">
+                <tr class="orderPlaceTableRow" id="row0">
+                    <td class="orderPlaceTableData" id="data0"><input type="text" class="tableInput" name="" placeholder="item number" id="input0"> </td>
+                    <td class="orderPlaceTableData" id="data1"><input type="text" class="tableInput" name="" placeholder="amount" id="amount0"></td>
+                    <td class="orderPlaceTableData" id="data2"><input type="submit" class="tableInput" name="" value="Add" id="add"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="CateringBookPage.js"></script>
+</body>
+
+</html>

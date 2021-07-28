@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>AyojonSomponnam | Home </title>
+    <link href="HomePage.css" type="text/css" rel="stylesheet">
+    <link href="CateringSignUp.css" type="text/css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1 id="header">AyojonSomponnam</h1>
+            <ul>
+                <li class="headerOption"><a href="#" class="notCurrent">Log in</a></li>
+                <li class="headerOption"><a href="#" class="notCurrent">Sign up</a></li>
+                <li class="headerOption"><a href="#" class="notCurrent">About Us</a></li>
+                <li class="headerOption"><a href="#" class="notCurrent">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="breakLine">
+    </div>
+
+    <div id="menuDivision">
+        <nav id="menuNev">
+            <ul>
+                <li><a href="#" class="meneOption">Home</a></li>
+                <li><a href="#" class="meneOption">Hall</a></li>
+                <li><a href="#" class="meneOption">Catering</a></li>
+                <li><a href="#" class="meneOption">Decorator</a></li>
+                <li><a href="#" class="meneOption">Photographer</a></li>
+                <li id="officiant"><a href="#">Marriage Officiant<a/></li>    
+            </ul>
+        </nav>
+    </div>
+    
+    <div id="cateringSignUp">
+        
+       <h1 id="cateringSignUpHeader">Sign Up(Catering Service Provider)</h1>
+       <form id="cateringSignUpForm">
+            <input type="text" name="" placeholder="Full Name" id="cateringFullName">
+            <input type="text" name="" placeholder="Address" id="cateringAddress">
+            <input type="text" name="" placeholder="Contact No." id="cateringContact">
+            <input type="email" name="" placeholder="Email" id="cateringEmail">
+            <input type="text" name="" placeholder="TIN NO" id="cateringTIN">
+            <input type="password" name="" placeholder="Password" id="cateringPassword">
+            <input type="password" name="" placeholder="Confirm Password" id="cateringConfirmPassword">
+            <input type="text" name="" placeholder="Thubmnail Image Link" id="cateringImg">
+
+            <div >
+                <h1 id="addingFoodHeader">Adding Food Items</h1>
+                <form id="foodItemFormAdd">
+                    <input type="text" placeholder="New item name" id="itemNameInput">
+                    <input type="text" placeholder="price" id="itemPriceInput">
+                    <input type="submit" value="add" id="addItem">
+                </form>
+            </div>
+
+            <div>
+                <h1 id="updatingFoodHeader">Updating Existing table</h1>
+                <form>
+                    <input type="text" placeholder="Give row number" id="itemRow">
+                    <input type="text" placeholder="New item name" id="itemNameInputUpdate">
+                    <input type="text" placeholder="price" id="itemPriceInputUpdate">
+                    <input type="submit" value="Edit" id="editItem">
+                </form>
+            </div>
+            
+            <div>
+                <h1 id="deletingFoodHeader">Delete Items</h1>
+                <form>
+                    <input type="text" placeholder="Delete Item row number" id="special">
+                    <input type="submit" value="delete item" id="deleteItem">
+                </form>
+                
+            </div>
+            
+            <div id="foodProduct" align="center" border="1" >
+                  <h2 id="foodProductHeader">Food Items</h2>
+                  <table id="foodProductTable">
+                      <tr> 
+                         <th id="foodProductHeader1">Item</th>
+                         <th id="foodProductHeader2">Price</th>
+                      </tr> 
+                      <tr>
+                          <td>White Rice</td>
+                          <td>200 per person</td>
+                      </tr>
+                  </table>
+              </div>
+            <input type="submit" name="" value="Submit" id="cateringSubmit">
+       </form>
+   </div>
+   
+   <script src="CateringSignUp.js"></script>
+   
+</body>
+</html>

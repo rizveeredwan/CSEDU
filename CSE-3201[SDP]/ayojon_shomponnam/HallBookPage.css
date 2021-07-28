@@ -1,0 +1,118 @@
+#foodItem {
+    background: black;
+    font-family: 'Pacifico', cursive, Arial;
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+    margin-top: 5%;
+}
+
+table {
+    border: 1px solid white;
+    margin-top: 5%;
+}
+
+table td {
+    border: 1px solid white;
+}
+
+table th {
+    border: 1px solid white;
+}
+
+#tableDiv {
+    margin-top: 5%;
+}
+
+h1 {
+    text-align: center;
+}
+
+table td {
+    padding: 0 50px 0 50px;
+}
+
+#bookPart {
+    display: grid;
+    width: 80%;
+    grid-template-columns: 30% 60%;
+    background: black;
+    margin-top: 10%;
+    color: white;
+    margin: 0 auto;
+}
+
+#formPart {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: white;
+    background: black;
+    margin-left: 2%;
+}
+
+#buttonPart {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: white;
+    background: black;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+#orderPlaceTable {
+    border: none;
+}
+
+.orderPlaceTableRow {
+    border: none;
+}
+
+.orderPlaceTableData {
+    border: none;
+    width: 0;
+}
+
+.tableInput {
+    width: 110px;
+    margin-left: -100px;
+}
+
+.startColumn {
+    margin-left: -100px;
+    width: 110px;
+}
+
+.mySlides {
+    margin: 0 auto;
+    background: black;
+}
+
+#photoGallery {
+    width: 100%;
+    background: black;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+#hallItem {
+    display: none;
+}
+
+
+/***********Last from to date part***********/
+
+#bookedDate {
+    margin: 0 auto;
+    background: black;
+    color: white;
+}
+
+#bookedSchedule {
+    margin: 0 auto;
+}
+
+#bookedScheduleDiv {
+    margin: 0 auto;
+    margin-left: 25%;
+}

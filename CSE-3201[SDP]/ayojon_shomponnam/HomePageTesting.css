@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic,latin-ext,vietnamese');
+@import url('https://fonts.googleapis.com/css?family=Pacifico&subset=latin-ext,vietnamese');
+body {
+    background: url("signUpImage.jpeg") no-repeat;
+    opacity: 0.8;
+    background-size: cover;
+    margin: 0;
+}
+
+header {
+    background: black;
+    color: white;
+    padding: 8px 0 0px 40px;
+    height: 70px;
+}
+
+header h1 {
+    display: inline;
+    font-family: 'Lobster', cursive, Arial;
+    font-weight: 400;
+    font-size: 32px;
+    float: left;
+    margin-top: 0px;
+    margin-right: 0px;
+}
+
+header nav ul {
+    display: inline;
+    padding: 0;
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+header nav ul li {
+    list-style-type: none;
+    float: left;
+    margin-left: 20px;
+    display: inline;
+}
+
+header nav ul li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-family: 'Pacifico', cursive, Arial;
+}
+
+#breakLine {
+    background: red;
+    height: 5px;
+}
+
+.current {
+    color: red;
+}
+
+.notCurrent:hover {
+    color: blue;
+}
+
+#menuDivision {
+    margin-left: 0;
+    padding: 0;
+}
+
+#menuDivision nav ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0;
+    width: 100%;
+}
+
+#menuDivision nav ul li {
+    float: left;
+    width: 216px;
+    height: 73px;
+    /*margin-left: 7px;*/
+    background-color: white;
+    opacity: 0.6;
+    line-height: 40px;
+    text-align: center;
+}
+
+#menuDivision nav ul li a {
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Pacifico', cursive, Arial;
+    font-size: 25px;
+    display: block;
+    color: orange-red;
+}
+
+#menuDivision nav ul li a:hover {
+    color: red;
+}
+
+#officiant {
+    padding: 0px -100px 0px 0px;
+    font-size: 1px;
+}
+
+#officiant a {
+    margin-top: 8px;
+    text-align: center;
+}
+
+#search {
+    opacity: 0.8;
+    width: 600px;
+    height: 30px;
+    margin-left: 400px;
+    margin-right: 100px;
+    margin-top: 250px;
+    color: red;
+}
+
+#searchButton {
+    height: 42px;
+    margin-left: -100px;
+    font-family: 'Pacifico', cursive, Arial;
+    opacity: 0.8;
+    color: red;
+    text-decoration: none;
+}
+
+#images {
+    margin-top: 50px;
+    margin-left: 50%;
+}
+
+.meneOption {
+    margin-top: 10px;
+    text-decoration: none;
+    color: red;
+    /*display: none;*/
+}
+
+.meneOption:hover {
+    color: blue;
+}
+
+#menuDivisionUp {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    background: white;
+    font-family: 'Pacifico', cursive, Arial;
+    font-size: 25px;
+    opacity: 0.8;
+    text-align: center;
+}
+
+#menuDivision {
+    display: none;
+}
+
+#searchForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+    font-size: 25px;
+    font-family: 'Lobster', cursive, Arial;
+}

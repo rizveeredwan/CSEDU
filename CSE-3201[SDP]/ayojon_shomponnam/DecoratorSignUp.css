@@ -1,0 +1,58 @@
+body {
+    background: url("decorator.jpg") no-repeat;
+    background-size: cover;
+}
+
+#decoratorSignUp {
+    font-family: 'Pacifico', cursive, Arial;
+}
+
+#decoratorSignUpHeader {
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+}
+
+input {
+    margin-left: 40%;
+    margin-bottom: 1%;
+    width: 290px;
+    height: 30px;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Pacifico', cursive, Arial;
+}
+
+input[type="text"],
+input[type="Date"],
+input[type="password"],
+input[type="email"] {
+    border-bottom: 2px solid white;
+    outline: none;
+    background: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+input[type="text"]:focus,
+input[type="Date"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    color: white;
+    width: 40%;
+}
+
+input[type="text"]:hover,
+input[type="Date"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover {
+    color: white;
+    font-size: 18px;
+}
+
+input[type="submit"] {
+    background: black;
+    opacity: 1;
+    color: white;
+}

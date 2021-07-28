@@ -1,0 +1,99 @@
+body {
+    background: url("catering2.jpeg") no-repeat;
+    background-size: cover;
+}
+
+#cateringSignUp {
+    font-family: 'Pacifico', cursive, Arial;
+}
+
+#cateringSignUpHeader {
+    text-align: center;
+    color: black;
+    margin-top: 100px;
+    font-weight: bold;
+}
+
+input {
+    margin-left: 40%;
+    margin-bottom: 1%;
+    width: 290px;
+    height: 30px;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Pacifico', cursive, Arial;
+}
+
+input[type="text"],
+input[type="Date"],
+input[type="password"],
+input[type="email"] {
+    border-bottom: 2px solid white;
+    outline: none;
+    background: none;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+input[type="text"]:focus,
+input[type="Date"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    color: red;
+    width: 40%;
+}
+
+input[type="text"]:hover,
+input[type="Date"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover {
+    color: black;
+    font-size: 18px;
+}
+
+input[type="submit"] {
+    background: black;
+    opacity: 1;
+    color: white;
+}
+
+table th {
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 10px 40px 10px 40px;
+}
+
+#foodProductHeader1 {
+    padding: 10px 100px 10px 100px;
+}
+
+#foodProductHeader2 {
+    padding: 10px 100px 10px 100px;
+}
+
+table td {
+    border: 1px solid black;
+    margin-left: 10px;
+}
+
+#addingFoodHeader {
+    text-align: center;
+}
+
+#updatingFoodHeader {
+    text-align: center;
+}
+
+#cateringSubmit {
+    margin-top: 5%;
+}
+
+#deletingFoodHeader {
+    text-align: center;
+}
+
+#hallCreate {
+    display: none;
+}

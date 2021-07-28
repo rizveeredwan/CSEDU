@@ -1,0 +1,44 @@
+body {
+    background: url("signUpImage.jpeg") no-repeat;
+    background-size: cover;
+    font-family: 'Pacifico', cursive, Arial;
+    opacity: 1;
+}
+
+#officiantHeader {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-top: 5%;
+    font-size: 50px;
+}
+
+.info {
+    width: 80%;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+}
+
+.lekha {
+    margin-left: 5%;
+    font-size: 20px;
+}
+
+.more {
+    margin-top: 50px;
+}
+
+.button {
+    color: white;
+    background: black;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    box-sizing: border-box;
+    opacity: 1;
+}
+
+#imageGallary {
+    text-align: center;
+}

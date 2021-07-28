@@ -1,0 +1,78 @@
+body {
+    background: url("signUpImage.jpeg") no-repeat;
+    background-size: cover;
+    font-family: 'Pacifico', cursive, Arial;
+    opacity: 1;
+}
+
+#hallItem {
+    background: black;
+    font-family: 'Pacifico', cursive, Arial;
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+    margin-top: 5%;
+}
+
+#hallHeader {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    margin-top: 5%;
+    font-size: 50px;
+}
+
+.info {
+    width: 80%;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+}
+
+.lekha {
+    margin-left: 5%;
+    font-size: 20px;
+}
+
+.more {
+    margin-top: 50px;
+}
+
+.button {
+    color: white;
+    background: black;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    box-sizing: border-box;
+    opacity: 1;
+}
+
+#imageGallary {
+    text-align: center;
+}
+
+table {
+    border: 1px solid white;
+    margin-top: 5%;
+}
+
+table td {
+    border: 1px solid white;
+}
+
+table th {
+    border: 1px solid white;
+}
+
+#tableDiv {
+    margin-top: 5%;
+}
+
+h1 {
+    text-align: center;
+}
+
+table td {
+    padding: 0 50px 0 50px;
+}

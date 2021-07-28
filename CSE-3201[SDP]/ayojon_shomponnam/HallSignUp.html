@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>AyojonSomponnam | Home </title>
+    <link href="HomePage.css" type="text/css" rel="stylesheet">
+    <link href="HallSignUp.css" type="text/css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1 id="header">AyojonSomponnam</h1>
+            <ul>
+                <li class="headerOption"><a href="#" class="notCurrent">Log in</a></li>
+                <li class="headerOption"><a href="#" class="notCurrent">Sign up</a></li>
+                <li class="headerOption"><a href="#" class="notCurrent">About Us</a></li>
+                <li class="headerOption"><a href="#" class="notCurrent">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="breakLine">
+    </div>
+
+    <div id="menuDivision">
+        <nav id="menuNev">
+            <ul>
+                <li><a href="#" class="meneOption">Home</a></li>
+                <li><a href="#" class="meneOption">Hall</a></li>
+                <li><a href="#" class="meneOption">Catering</a></li>
+                <li><a href="#" class="meneOption">Decorator</a></li>
+                <li><a href="#" class="meneOption">Photographer</a></li>
+                <li id="officiant"><a href="#">Marriage Officiant<a/></li>    
+            </ul>
+        </nav>
+    </div>
+    <div id="hallSignUp">
+            <h1 id="hallSignUpHeader">Sign Up(Hall Service Provider)</h1>
+            <form id="hallSignUpForm">
+                    <input type="text" name="" placeholder="Hall Name" id="hallFullName">
+                    <input type="text" name="" placeholder="Address" id="hallAddress">
+                    <input type="text" name="" placeholder="Contact No." id="hallContact">
+                    <input type="email" name="" placeholder="Email" id="hallEmail">
+                    <input type="text" name="" placeholder="TIN NO" id="hallTIN">
+                    <input type="password" name="" placeholder="Password" id="hallPassword">
+                    <input type="password" name="" placeholder="Confirm Password" id="hallConfirmPassword">
+                    <input type="text" name="" placeholder="Thumbnail Image" id="hallThumb">
+                    <input type="text" name="" placeholder="portfolio link" id="hallPortfolio"> 
+                    <h2 id="hallCapacityHeader">Halls</h2>
+                    <div id="hallCapacityDiv">
+                    <div>
+                        <form id="hallCreateForm">
+                            <input type="text" name="" placeholder="New Hall Name" id="hallCreate">
+                            <input type="text" name="" placeholder="Capacity" id="hallCapacity">
+                            <input type="text" name="" placeholder="Row number (Must for delete/edit)" id="hallRow">
+                            <input type="submit" name="" value="Create" id="hallCreateSubmit">
+                            <input type="submit" name="" value="Edit" id="hallCreateEdit">
+                            <input type="submit" name="" value="Delete" id="hallCreateDelete">
+                        </form>
+                    </div>
+                    <div>
+                        <table id="hallTable">
+                            <tr>
+                                <th>Hall Name</th>
+                                <th>Capacity</th>
+                            </tr>
+                            <tr>
+                                <td>Shahin's Paradise</td>
+                                <td>1000</td>  
+                            </tr>
+                            <tr>
+                                    <td>Ostader Akhra</td>
+                                    <td>1000</td>  
+                            </tr>
+                            <tr>
+                                    <td>Ostader Akhra</td>
+                                    <td>1000</td>  
+                            </tr>
+                        </table>
+                    </div>
+                    </div>
+                    
+                    <div>
+                        <h2 id="scheduleHeader">Available Schedule</h2>
+                        <div id="scheduleController">
+                            <div id="scheduleFormPart">
+                                <form id="scheduleForm">
+                                    <input type="date" name="" placeholder="dd-mm-year" id="scheduleDate">
+                                    <input class = "schedule"type="text" name="" placeholder="Hall Name" id="scheduleHall">
+                                    <input class = "schedule" type="text" name="" placeholder="Available-Morning(y/n)" id="scheduleMorning">
+                                    <input class = "schedule" type="text" name="" placeholder="Available-AfterNoon(y/n)" id="scheduleAfternoon">
+                                    <input class = "schedule" type="text" name="" placeholder="Available-Night(y/n)" id="scheduleNight">
+                                    <input class = "schedule" type="text" name="" placeholder="row number(must for Edit/Delete)" id="scheduleDDel">
+                                
+                                    <input type="submit" name="" value="Create" id="scheduleCreate">
+                                    <input type="submit" name="" value="Edit" id="scheduleEdit"> 
+                                    <input type="submit" name="" value="Delete" id="scheduleDelete">
+                                </form>
+                            </div>
+                            <div id="scheduleTablePart">
+                                <table id="scheduleTable">
+                                    <tr>
+                                       <th>Date</th>
+                                       <th>Hall Name</th>
+                                       <th>Morning</th>
+                                       <th>AfterNoon</th>
+                                       <th>Night</th>
+                                    </tr>
+                                    <tr>
+                                       <td>14-10-2017</td> 
+                                       <td>Shahin's Paradise</td>
+                                       <td>Yes</td>   
+                                       <td>Yes</td> 
+                                       <td>No</td>    
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" name="" value="submit" id="hallSubmit">
+                    
+            </form>
+    </div>
+    <script src="HallSignUp.js"></script>        
+    </body>
+    </html>

@@ -1,0 +1,49 @@
+body {
+    background: url("photographerBackground.jpg") no-repeat;
+    background-size: cover;
+    font-family: 'Pacifico', cursive, Arial;
+}
+
+#photographerHeader {
+    color: black;
+}
+
+#book {
+    background: black;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5%;
+    display: grid;
+    color: white;
+}
+
+#book h2 {
+    text-align: center;
+}
+
+#bookPart {
+    display: grid;
+    width: 20%;
+    grid-template-columns: 1fr;
+    margin-left: 10px;
+}
+
+#searchResult {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+#buttons {
+    margin-top: 5%;
+    margin-left: 10px;
+}
+
+.mySlides {
+    margin: 0 auto;
+    background: black;
+}
+
+#photoGallery {
+    width: 100%;
+    background: black;
+}

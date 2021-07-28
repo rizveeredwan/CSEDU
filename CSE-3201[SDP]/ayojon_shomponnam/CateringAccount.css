@@ -1,0 +1,113 @@
+body {
+    font-family: 'Pacifico', cursive, Arial;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+#information {
+    background: black;
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.infoClass {
+    width: 60%;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+input[type="file"] {
+    background: white;
+    width: 60%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+#schedeulePart {
+    display: block;
+    background: black;
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#foodPart {
+    display: block;
+    background: black;
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+    display: none;
+}
+
+#dataPart {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-column-gap: 5%;
+}
+
+#foodDataPart {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-column-gap: 5%;
+    background: black;
+}
+
+#editForm {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#foodEditForm {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#buttonForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 2%;
+    grid-column-gap: 1em;
+}
+
+#foodButtonForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 2%;
+    grid-column-gap: 1em;
+}
+
+table {
+    margin: 0 auto;
+}
+
+table td {
+    border: 1px solid white;
+}
+
+table th {
+    border: 1px solid white;
+}
+
+#submitButton {
+    color: white;
+    margin: 0 auto;
+}
+
+#submit {
+    margin: 0 auto;
+    margin-left: 50%;
+    margin-top: 20px;
+    color: white;
+    background: black;
+    padding: 15px 30px 15px 30px;
+}

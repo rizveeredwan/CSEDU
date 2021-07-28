@@ -1,0 +1,111 @@
+#hoi {
+    text-decoration: none;
+    color: white;
+    text-underline-position: 0;
+}
+
+#customerSelect {
+    display: grid;
+    margin-top: 10%;
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(150px, auto);
+    text-align: center;
+    font-family: 'Pacifico', cursive, Arial;
+}
+
+#customerWriting {
+    background: white;
+    opacity: 1;
+}
+
+#customerHeadline {
+    color: black;
+}
+
+#hallSelect {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(150px, auto);
+    text-align: center;
+    font-family: 'Pacifico', cursive, Arial;
+}
+
+#hallWriting {
+    background: white;
+    opacity: 1;
+}
+
+#headHeadline {
+    color: black;
+}
+
+#cateringSelect {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(150px, auto);
+    text-align: center;
+    font-family: 'Pacifico', cursive, Arial;
+}
+
+#cateringWriting {
+    background: white;
+    opacity: 1;
+}
+
+#cateringHeadline {
+    color: black;
+}
+
+#decoratorSelect {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(150px, auto);
+    text-align: center;
+    font-family: 'Pacifico', cursive, Arial;
+    font-weight: 40px;
+}
+
+#decoratorWriting {
+    background: white;
+    opacity: 1;
+}
+
+#decoratorHeadline {
+    color: black;
+}
+
+#photographerSelect {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(150px, auto);
+    text-align: center;
+    font-family: 'Pacifico', cursive, Arial;
+    font-weight: 40px;
+}
+
+#photographerWriting {
+    background: white;
+    opacity: 1;
+}
+
+#photographerHeadline {
+    color: black;
+}
+
+#marriageOfficiantSelect {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(150px, auto);
+    text-align: center;
+    font-family: 'Pacifico', cursive, Arial;
+    font-weight: 40px;
+}
+
+#marriageOfficiantWriting {
+    background: white;
+    opacity: 1;
+}
