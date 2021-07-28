@@ -1,0 +1,74 @@
+;Redwan Ahmed Rizvee
+;Roll - 09
+
+
+extern printf;prime number normal finding from 2 to  (n-1) looping
+
+section .data
+
+ a   :        dq     10
+ fmt1:        db     "%ld is prime",10,0
+ fmt2:        db     "%ld is not prime",10,0
+
+
+section .bss
+ b   :       resq    1
+ C   :       resq    1
+
+section .text
+
+      global  main
+
+
+main : 
+
+     push   rbp
+     mov    rax,[a]
+     cmp    rax,2
+     JE     SPECIAL_CASE
+     SUB    rax,1
+     mov    [b],rax
+     mov    rax,2
+     JMP    PRIME
+
+
+PRIME:
+
+    mov  [c],rax
+    mov  rax,[a]
+    DIV  [c]
+    CMP  rdx,0
+    JE   NOT_PRIME
+    mov  rax,[c]
+    addc rax,1
+    CMP  rax,[b]
+    JE   SPECIAL_CASE
+    JMP  PRIME
+
+
+SPECIAL_CASE:
+   mov  rdi,fmt1
+   mov  rsi,[a]
+   call printf
+   JMP  EXIT
+
+NOT_PRIME:
+   mov  rdi,fmt2
+   mov  rsi,[a]
+   call printf
+   JMP  EXIT
+
+EXIT:
+  pop rbp
+  mov rax,0
+  ret
+  
+
+
+
+
+
+    
+
+
+ 
