@@ -1,1 +1,0 @@
-void background(int i);
