@@ -1,0 +1,112 @@
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+
+int function(int n, int np){
+   int p[np+2][2];
+   int p2[np+2][2];
+   
+   for(int i=0;i<=np;i++){
+       pipe(p[i]);
+       pipe(p2[i]);
+   }
+   int guni=0;
+   for(int i=2,tot=1;i<=n;i++,tot++){
+     char arr[50];
+     int value=i;
+     int j=-1;
+     while(value != 0){
+        char rem=(value%10)+'0';
+        value /= 10;
+        j++;
+        arr[j]=rem;
+     }
+     j++;
+     arr[j]='\0';
+     int length=strlen(arr);
+     for(int j=0;j<length/2;j++){
+        char ch=arr[j];
+        arr[j]=arr[length-(j+1)];
+        arr[length-(j+1)]=ch;
+     }
+     i = i + (n/np);
+     printf("starting =  %s\n",arr);
+     guni++; 
+     write(p[tot][1],arr,8);
+   }
+   while(guni <np){
+     int con=n;
+     char arr[50];
+     int j=-1;
+     while(con !=0){
+      char rem= (con%10)+'0';
+      j++;
+      arr[j]=rem;
+      con /= 10;
+     }
+     j++;
+     arr[j]='\0';
+     guni++;
+     write(p[guni][1],arr,8);
+   }
+   printf("parallel process is being started.\n");
+   for(int i=1;i<=np;i++){
+     pid_t pid=fork();
+     if(pid==0){
+        close(p[i][1]);
+        close(p2[i][0]);
+        char arr[50];
+        read(p[i][0],arr,8);
+        int length=strlen(arr);
+        int number=0;
+        for(int j=0;j<length;j++){
+           number = number*10 + (arr[j]-'0');
+        }
+        printf("in child = %s\n",arr);
+        char sent[50];
+        sent[0]='1';
+        sent[1]='\0';
+        for(int j=number;j<=n && j<=number+(n/np);j++){
+            if(n%j==0 && n != j) {
+               sent[0]='0';
+               sent[1]='\0';
+               break;
+            }
+        }
+        printf("child written %s.\n",sent);
+        write(p2[i][1],sent,8);
+        return 0;
+     }
+     else {
+        close(p[i][0]);
+        close(p2[i][1]);
+        continue;
+     }
+   }
+   int ok=1;
+   for(int i=1;i<=np;i++){
+     char arr[50];
+     read(p2[i][0],arr,8);
+     //printf("in parent = %s\n",arr);
+     if(arr[0]=='0'){
+       ok=0;
+       continue;
+     }
+   }  
+   if(ok){
+     printf("%d is prime.\n",n);
+   }
+   else {
+     printf("%d is not prime.\n",n);
+   }
+   return 0;
+}
+
+
+int main(void){
+   int n,para;
+   scanf("%d %d",&n,&para);
+   function(n,para);
+}
+
+

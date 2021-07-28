@@ -1,0 +1,313 @@
+//Lab 4
+//Problem 1
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+
+#define MAX_SIZE 1024
+
+int main(int argc,char **argv) {
+   
+   char *args[1024];
+   for(int i=1;i<argc;i++){
+     args[i-1]=argv[i];
+     printf("%s\n",args[i-1]);
+   }
+   args[argc]=NULL;
+   int ret = execvp(args[0],args);
+   if(ret == -1) {
+    perror("execv");
+   }   
+   return 0;
+}   
+
+//Problem 2
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/resource.h>
+
+
+#define MAX_SIZE 1024
+
+int work(char **args){
+  pid_t pid;
+  int status;
+  pid=fork();
+  if(pid == 0){
+    int v = execvp(args[0],args);
+    if(v == -1) {
+      perror("execvp");
+    }
+    return v;
+  }
+  else if(pid > 0){
+    int v = wait(&status);
+    struct rusage usage;
+    getrusage(RUSAGE_SELF, &usage);
+    printf("The amount of CPU time used used = %ld\n",usage.ru_utime);
+    printf("The amount of system time used = %ld\n",usage.ru_stime);
+    printf("involuntary context switches = %ld\n",usage.ru_nivcsw);
+    printf("voluntary context switches = %ld\n",usage.ru_nvcsw);
+    printf("the number of page faults = %ld\n",usage.ru_majflt+usage.ru_minflt);
+    printf("the number of page faults which can be avoided = %ld\n",usage.ru_majflt+usage.ru_minflt);
+  }
+  else if (pid == -1){
+    perror("vul");
+  }
+}
+
+int main(int argc,char **argv) {
+   
+   char *args[1024];
+   for(int i=1;i<argc;i++){
+     args[i-1]=argv[i];
+     printf("%s\n",args[i-1]);
+   }
+   args[argc]=NULL;
+   int ret = work(args);
+   if(ret == -1) {
+    perror("execv");
+   }   
+   return 0;
+}
+//Problem 3
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+#define MAX_SIZE 1024
+
+pid_t backGroundJobs[MAX+5];
+int counter;
+
+int cat(char *command,char *path){
+   
+     char *args[5];
+     args[0]=command;
+     args[1]=path;
+     args[2]=NULL;
+     if(path[strlen(path)-1] == '&') {
+       path[strlen(path)-1]='\0';
+       args[1]=path;
+       pid_t pid;
+       pid = fork();
+       if(pid == 0){
+         int ret=execvp(args[0],args);
+         if(ret == -1) perror("cat");
+         else return ret;
+       }
+       else if(pid>0){
+         counter++;
+         backGroundJobs[counter]=pid;
+         return 1;
+       }
+     }
+     else {
+       int ret=execvp(args[0],args);
+       if(ret == -1) perror("cat");
+       else return ret;
+     }
+     
+   
+}
+int cd(char *command,char *path){
+   
+     char *args[5];
+     args[0]=command;
+     args[1]=path;
+     args[2]=NULL;
+     int ret = chdir(path);
+     if(ret == -1) perror("cd");
+     else {
+       printf("Directory been changed.\n");
+       return 1;
+     }
+  
+}
+int ls(char *command,char *path){
+   
+     char *args[5];
+     args[0]=command;
+     if(path[0] == '&'){
+       pid_t pid;
+       pid = fork();
+       if(pid == 0){
+         int ret=execvp(args[0],args);
+         if(ret == -1) perror("ls");
+         else return ret;
+       }
+       else if(pid>0){
+            counter++;
+            backGroundJobs[counter]=pid;
+            return 1;
+       }
+       
+     }
+     else {
+     int ret=execvp(args[0],args);
+     if(ret == -1) perror("ls");
+     else return ret;
+     }
+}
+
+int jobs(){
+  
+ for(int i=1;i<=counter;i++){
+    pid_t pid =backGroundJobs[i];
+    
+ }
+}
+
+
+int main(int argc,char **argv) {
+   
+   counter = 0;
+   while(1){
+   
+    char string[MAX_SIZE+5];
+    gets(string);
+    //printf("%s\n",string);
+    int idx= -1;
+    char command[MAX_SIZE+5];
+    char path[MAX_SIZE+5];
+    for(int i=0;i<strlen(string);i++){
+       if(string[i] ==  ' '){
+         idx++;
+         command[idx]='\0';
+         break;
+       }
+       idx++;
+       command[idx] = string[i];
+       continue;
+    }
+    int jdx= -1;
+    for(int i=idx+1;i<strlen(string);i++){
+      if(string[i] ==  ' ') continue;
+      else {
+        jdx++;
+        path[jdx]=string[i];
+        continue;
+      }
+    }
+    jdx++;
+    path[jdx] = '\0';
+    if(path[0] == 'l' && path[1] == 's'){
+      path[2]='\0';
+    }
+    if(path[0] == 'e' && path[1] == 'x' && path[2] == 'i' && path[3] == 't'){
+      path[4]='\0';
+    }
+   if(path[0] == 'j' && path[1] == 'o' && path[2] == 'b' && path[3] == 's'){
+      path[4]='\0';
+    }
+    printf("%s %d %s %d\n",command,strlen(command),path,strlen(path));
+    
+    if(strcmp(command,"cat")==0) {
+       //printf("ase\n");
+       int v = cat(command,path);
+    }
+    else if(strcmp(command,"cd")==0) {
+      int v = cd(command,path);
+    }
+    else if(strcmp(command,"ls")==0) {
+        int v = ls(command,path);
+    }
+    else if(strcmp(command,"exit")==0) {
+       int status;
+       exit(0);
+    }
+    else if(strcmp(command,"jobs")==0){
+    
+    }
+   }
+   
+}
+//Background
+#include <stdio.h>
+#include <sys/types.h>
+#include <string.h>
+#include <sys/wait.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+#define MAX 1024 
+
+int background_process_counter;
+pid_t background_process[MAX+5];
+
+int create_new_process(char *args){
+  pid_t pid;
+  int own_pid = getpid();
+  pid=fork();
+  if(pid==0){
+  
+    char command [MAX+5][MAX+5];
+    int length=strlen(args);
+    int j= -1; 
+    char temp[MAX+5];
+    int idx=-1;
+    for(int i=0;i<length;i++){
+        if(args[i] == ' '){
+           temp[j+1]='\0';
+           j=-1;
+           idx++;
+           strcpy(command[idx],temp);
+           continue;
+        }
+        else {
+           j++;
+           temp[j]=args[i];
+           continue;
+        }
+    }
+    idx++;
+    temp[j+1]='\0';
+    strcpy(command[idx],temp);
+    idx++;
+    command[idx][0]='\0';
+    char *parameter[MAX+5];
+    for(int i=0;i<idx;i++){
+      parameter[i]=command[i];
+    }
+    parameter[idx]=NULL;
+    int ret=execvp(parameter[0],parameter);
+    if(ret == -1) {
+      perror("execvp");
+    }
+  
+ }
+  else if(pid>0){
+    background_process_counter++;
+    background_process[background_process_counter]=pid;
+    int status;
+    //pid_t p=wait(&status);
+    printf("Parent process is returning.\n");
+    return 0; 
+  }
+  else {
+   perror("error in forking.\n");
+   return 0;
+  }
+}
+
+void check_background_process(){
+  for(int i=1;i<=background_process_counter;i++){
+     pid_t pid = background_process[i];
+     int status;
+     pid_t ret=waitpid(pid,&status,WNOHANG);
+     if(ret != -1){
+        printf("running %d\n",pid);
+     }
+  }
+}
+
+int main(int argc, char **argv){
+  
+  background_process_counter=0;
+  char arr[]="sleep 100";
+  create_new_process(arr); 
+  check_background_process();
+  return 0;
+}
