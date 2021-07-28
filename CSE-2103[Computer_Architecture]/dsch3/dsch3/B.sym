@@ -1,0 +1,40 @@
+USER SYMBOL by DSCH3
+DATE 4/11/2016 9:21:55 PM
+SYM  #B
+BB(0,0,40,60)
+TITLE 10 -7  #B
+MODEL 6000
+REC(5,5,30,50)
+PIN(0,40,0.00,0.00)b
+PIN(0,10,0.00,0.00)H
+PIN(0,30,0.00,0.00)c
+PIN(0,50,0.00,0.00)a
+PIN(0,20,0.00,0.00)D
+PIN(40,10,2.00,1.00)Sum
+PIN(40,20,2.00,1.00)Carry
+LIG(0,40,5,40)
+LIG(0,10,5,10)
+LIG(0,30,5,30)
+LIG(0,50,5,50)
+LIG(0,20,5,20)
+LIG(35,10,40,10)
+LIG(35,20,40,20)
+LIG(5,5,5,55)
+LIG(5,5,35,5)
+LIG(35,5,35,55)
+LIG(35,55,5,55)
+VLG module B( b,H,c,a,D,Sum,Carry);
+VLG  input b,H,c,a,D;
+VLG  output Sum,Carry;
+VLG  wire w4,w6,w7,w11,w12,w13,w14,;
+VLG  and #(16) and2_1(w4,H,b);
+VLG  and #(16) and2_2(w6,c,H);
+VLG  xor #(16) xor2_3(w7,w4,w6);
+VLG  xor #(16) xor2_4(Sum,w7,a);
+VLG  xor #(16) xor2_5(w11,a,D);
+VLG  or #(16) or2_6(w12,c,b);
+VLG  and #(16) and2_7(w13,w12,w11);
+VLG  and #(16) and2_8(w14,b,c);
+VLG  or #(16) or2_9(Carry,w13,w14);
+VLG endmodule
+FSYM

@@ -1,0 +1,28 @@
+USER SYMBOL by DSCH3
+DATE 4/11/2016 9:25:08 PM
+SYM  #C
+BB(0,0,40,30)
+TITLE 10 -7  #C
+MODEL 6000
+REC(5,5,30,20)
+PIN(0,20,0.00,0.00)xi
+PIN(0,10,0.00,0.00)xi_1
+PIN(40,20,2.00,1.00)D
+PIN(40,10,2.00,1.00)H
+LIG(0,20,5,20)
+LIG(0,10,5,10)
+LIG(35,20,40,20)
+LIG(35,10,40,10)
+LIG(5,5,5,25)
+LIG(5,5,35,5)
+LIG(35,5,35,25)
+LIG(35,25,5,25)
+VLG module C( xi,xi_1,D,H);
+VLG  input xi,xi_1;
+VLG  output D,H;
+VLG  wire w6;
+VLG  xor #(16) xor2_1(H,xi,xi_1);
+VLG  not #(10) inv_2(w6,xi_1);
+VLG  and #(16) and2_3(D,xi,w6);
+VLG endmodule
+FSYM

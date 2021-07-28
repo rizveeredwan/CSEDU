@@ -1,0 +1,27 @@
+USER SYMBOL by DSCH3
+DATE 4/30/2006 2:44:10 PM
+SYM  #sym6
+BB(0,0,40,40)
+TITLE 10 -7  #sym6
+MODEL 6000
+REC(5,5,30,30)
+PIN(0,10,0.00,0.00)in3
+PIN(0,30,0.00,0.00)in1
+PIN(0,20,0.00,0.00)in2
+PIN(40,10,2.00,1.00)out1
+LIG(0,10,5,10)
+LIG(0,30,5,30)
+LIG(0,20,5,20)
+LIG(35,10,40,10)
+LIG(5,5,5,35)
+LIG(5,5,35,5)
+LIG(35,5,35,35)
+LIG(35,35,5,35)
+VLG module sym6( in3,in1,in2,out1);
+VLG  input in3,in1,in2;
+VLG  output out1;
+VLG  wire w4,;
+VLG  and #(16) and2_1(w4,in2,in1);
+VLG  and #(16) and2_2(out1,in3,w4);
+VLG endmodule
+FSYM

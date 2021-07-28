@@ -1,0 +1,17 @@
+USER SYMBOL by DSCH3
+DATE 4/24/2006 2:07:32 PM
+SYM  #3inputXor
+BB(0,0,40,30)
+TITLE 10 -7  #sajib
+MODEL 6000
+REC(5,5,30,20)
+LIG(5,5,5,25)
+LIG(5,5,35,5)
+LIG(35,5,35,25)
+LIG(35,25,5,25)
+VLG module sajib( );
+VLG  wire w2,w3,w4,w5,w6;
+VLG  xor #(9) xor2_1(w4,w2,w3);
+VLG  xor #(16) xor2_2(w2,w5,w6);
+VLG endmodule
+FSYM
