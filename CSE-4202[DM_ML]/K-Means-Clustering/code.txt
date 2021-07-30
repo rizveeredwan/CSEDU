@@ -1,0 +1,44 @@
+def show_clusters(self,point_list,centers):
+        n=len(point_list)
+        color_list = ['black','red','green','yellow','blue']
+        counter=-1
+        count_point=0
+        for i in point_list:
+            for j in i:
+                count_point=count_point+1
+        x = np.zeros(count_point)
+        y = np.zeros(count_point)
+        z = np.zeros(count_point)
+        colors=[]
+        jog=0
+        for i in point_list:
+            jog=jog+1
+            colors.append(color_list[jog-1])
+            for j in i:
+                counter=counter+1
+                x[counter]=j[0]
+                y[counter]=j[1]
+                z[counter]=jog 
+        fig=plt.figure(figsize=(8,8))
+        
+        
+        count_point=len(centers)
+        x_c=np.zeros(count_point)
+        y_c=np.zeros(count_point)
+        z_c=np.zeros(count_point)
+        
+        jog=-1
+        col=0
+        for i in centers:
+            jog=jog+1
+            col=col+1
+            x_c[jog]=i[0]
+            y_c[jog]=i[1]
+            z_c[jog]=col
+        
+        
+        plt.scatter(x,y,c=z,cmap=mlt.colors.ListedColormap(colors))
+        plt.scatter(x_c,y_c,c=z_c,marker='x',cmap=mlt.colors.ListedColormap(colors))
+        plt.show()
+        return 
+  
